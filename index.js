@@ -7,13 +7,14 @@ const btn = document.getElementById("btn")
 const btn2 = document.getElementById("btn2")
 const nav1=document.getElementById("nav1")
 const nav2=document.getElementById("nav2")
-const content=document.getElementByID("content")
+let cont=document.getElementById("cont")
+let tableData=document.getElementById("tab")
 
 
 // const table = document.getElementById("tab")
 nav1.addEventListener("click",function()
 {
-    content.display="flex"
+cont.style.display="flex"
 })
 
 class Book {
@@ -63,21 +64,29 @@ let library = new Library();
 let book1
 
 btn.addEventListener("click", function () {
+   
     book1 = new Book(input1.value, input2.value, input3.value);
     console.log(input1.value, input2.value, input3.value);
 
     library.addbook(book1);
+    input1.value=""
+    input2.value=""
+    input3.value=""
+
+
+
 
 })
 
 let i=1;
 let j=0;
 btn2.addEventListener("click", function () {
-    
+
+
     console.log(library.listBooks());
     let data=library.listBooks();
 
-
+   
     const table = document.getElementById("tab").getElementsByTagName('tbody')[0];
     const newRow = table.insertRow();
     const cell1 = newRow.insertCell(0);
