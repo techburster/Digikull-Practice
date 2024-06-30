@@ -63,6 +63,7 @@ btn.addEventListener("click", function () {
 })
 
 let i=1;
+let j=0;
 btn2.addEventListener("click", function () {
     
     console.log(library.listBooks());
@@ -75,12 +76,16 @@ btn2.addEventListener("click", function () {
     const cell2 = newRow.insertCell(1);
     const cell3 = newRow.insertCell(2);
     const cell4 = newRow.insertCell(3) ;
-    cell1.innerHTML = i; 
-    i++;  
-    console.log(i);
-    cell2.innerHTML = data[0].Book.title;
-    cell3.innerHTML=data[i-1].Book.author;
-    cell4.innerHTML=data[i-1].Book.isbn;
+    cell1.innerHTML = i;  
+    
+    // console.log(data[i-1].title)
+
+
+    cell2.innerHTML = data[j].title;
+    cell3.innerHTML=data[j].author;
+    cell4.innerHTML=data[j].isbn;
+    j++;
+    i++;
     
 })
 
