@@ -5,8 +5,16 @@ const input2 = document.getElementById("aName")
 const input3 = document.getElementById("isbnNumber")
 const btn = document.getElementById("btn")
 const btn2 = document.getElementById("btn2")
-// const table = document.getElementById("tab")
+const nav1=document.getElementById("nav1")
+const nav2=document.getElementById("nav2")
+const content=document.getElementByID("content")
 
+
+// const table = document.getElementById("tab")
+nav1.addEventListener("click",function()
+{
+    content.display="flex"
+})
 
 class Book {
     constructor(title, author, isbn) {

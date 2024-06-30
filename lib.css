@@ -19,13 +19,24 @@ section div
     flex-direction: column;
     background-color: blanchedalmond;
        width: 50%;
-     border: solid black 1px;
+    
      padding-left: 15%;
       
+}
+section div:hover
+{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+section div:nth-child(1)
+{
+    border-right: solid black 5px;
 }
 content
 {
         display: flex;
+        display: none;
         width: 90%;
         margin-top: 50px;
        
